@@ -1,28 +1,31 @@
 import React from 'react';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
 import image from '../assets/images/logo-dbytee.png';
+import { Link } from 'react-router-dom';
 
 function SideBar() {
     return (
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-purple accordion" id="accordionSidebar">
+            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 {/*<!-- Sidebar - Brand -->*/}
-                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-                    <div className="sidebar-brand-icon">
-                        <img className="w-100" style={{ minWidth: 7 + 'rem' }} src={image} alt="Digital House" />
-                    </div>
-                </a>
+                <li className="nav-item sidebar-brand d-flex align-items-center justify-content-center">
+                    <Link className="nav-link" to="/">
+                        <img className="w-100" src={image} alt="Digital House" />
+                    </Link>
+                </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider my-0" />
+
                 {/*<!-- Nav Item - Dashboard -->*/}
-                <li className="nav-item active">
-                    <a className="nav-link" href="/">
+                <li className="nav-item">
+                    <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard</span></a>
+                        <span>Dashboard - DH movies</span>
+                    </Link>
                 </li>
+
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider" />
 
@@ -31,32 +34,34 @@ function SideBar() {
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="/">
-                        <i className="fas fa-fw fa-box-open"></i>
-                        <span>Productos</span>
-                    </a>
+                    <Link className="nav-link" to='/LastMovieInDb'>
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Last Movie</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-layer-group"></i>
-                        <span>Categorias</span></a>
+                    <Link className="nav-link" to='/ContentRowMovies'>
+                        <i className="fas fa-fw fa-chart-area"></i>
+                        <span>Movies</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-user"></i>
-                        <span>Usuarios</span></a>
+                    <Link className="nav-link" to='/GenresInDb'>
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>Genres</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block" />
             </ul>
             {/*<!-- End of Sidebar -->*/}
-
         </React.Fragment>
     )
 }
+
 export default SideBar;

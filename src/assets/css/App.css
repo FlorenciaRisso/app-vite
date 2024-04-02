@@ -4266,7 +4266,8 @@ input[type=submit].btn-block {
 
 .nav-link {
     display: block;
-    padding: .5rem 1rem
+    padding: .5rem 1rem;
+    color:#2d2e33;
 }
 
 .nav-link:focus,
@@ -11343,7 +11344,8 @@ a:focus {
     text-align: center;
     padding: 0 1rem;
     font-weight: 800;
-    font-size: .65rem
+    font-size: .65rem;
+    color: #c2436e;
 }
 
 @media (min-width:768px) {
