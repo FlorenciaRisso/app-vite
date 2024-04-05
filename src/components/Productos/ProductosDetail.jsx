@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-import ProductCart from './ProductCard';
+import ProductCard from './ProductCard';
 
 function ProductosDetail(props) {
     let id = props.match.params.id;
@@ -20,20 +20,15 @@ function ProductosDetail(props) {
         <div>
             <h2>Detalle del Producto</h2>
             <p>id: {id}</p>
-            <p>nombre: {detalle.nombre}</p>
-            <p>descripcion: {detalle.descripcion}</p>
-            <p>precio: ${detalle.precio}</p>
-            <p>stock: {detalle.stock}</p>
+            <p>nombre: {detalle.Nombre}</p>
+            <p>descripcion: {detalle.Descripcion}</p>
+            <p>precio: ${detalle.Precio}</p>
+            <p>stock: {detalle.Stock}</p>
             {/* <p>categoria: {detalle.categoria.id}</p> */}
-            <p>marca: {detalle.marca}</p>
-            <p>descuento: {detalle.descuento}</p>
+            <p>marca: {detalle.Marca}</p>
+            <p>descuento: {detalle.Descuento}</p>
             <h3>Imágenes del Producto</h3>
-            <div className="d-flex w-100">
-                {/* Recorremos el array de imágenes y mostramos cada una */}
-                {Array.isArray(detalle.ImagenesProducto) && detalle.ImagenesProducto.map((imagen, index) => (
-                    <ProductCart imagen={imagen} index={index} key={index}></ProductCart>
-                ))}
-            </div>
+            
         </div>
     );
 }
