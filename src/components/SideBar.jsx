@@ -22,7 +22,7 @@ function SideBar() {
                 <li className="nav-item">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span>
+                        <span>Dashboard - DigitalByte</span>
                     </Link>
                 </li>
 
@@ -30,29 +30,36 @@ function SideBar() {
                 <hr className="sidebar-divider" />
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Actions</div>
+                <div className="sidebar-heading">Acciones</div>
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to='/LastMovieInDb'>
+                    <Link className="nav-link" to='/Productos'>
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Last Movie</span>
+                        <span>Productos</span>
                     </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to='/ContentRowMovies'>
+                    <Link className="nav-link" to='/'>
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Movies</span>
+                        <span>20% Off</span>
                     </Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to='/GenresInDb'>
+                    <Link className="nav-link" to='/'>
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Genres</span>
+                        <span>Usuarios</span>
+                    </Link>
+                </li>
+
+                <li className="nav-item">
+                    <Link className="nav-link" to='/'>
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>Categorias</span>
                     </Link>
                 </li>
 
