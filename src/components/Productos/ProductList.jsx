@@ -4,10 +4,10 @@ function ProductList(props){
     return(
         <>
             <tr>
-                <td>{props.producto.id}</td>
-                <td>{props.producto.categories}</td>
+                <td>{props.producto.ID_Producto}</td>
+                <td>{props.producto.Categoria.Nombre}</td>
                 <td>
-                <Link to={`/Productos/detail/${props.producto.id}`}>
+                <Link to={`/Productos/${props.producto.ID_Producto}`}>
                         <span>Ver Producto</span>
                 </Link>
                 </td>

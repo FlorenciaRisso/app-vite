@@ -13,7 +13,7 @@ function App() {
         <Switch>
           <Route path="/" exact={true} component={ContentWrapper} />
           <Route path="/Productos" exact={true} component={Productos} />
-          <Route path="/Productos/detail/:id" exact={true} component={ProductosDetail} />
+          <Route path="/Productos/:id" exact={true} component={ProductosDetail} />
         </Switch>
       </div>
     </>

@@ -1,16 +1,34 @@
-.table{
-    border-color: rgb(54, 54, 54);
-    border-width: 1px;
-    border-style: solid;
+.container {
+    padding: 20px;
+  }
+  
+  .card {
+    margin-top: 20px;
+    border: 1px solid rgb(54, 54, 54);
     width: 80%;
     margin: auto;
-}
-
-
-.table tbody, td, tfoot, th, thead, tr {
-    border-width: 1px;
-}
-
-.d-flex{
-    background-color:red;
-}
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-bottom: 1px solid rgb(54, 54, 54);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-body img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .detail-item {
+    margin-bottom: 10px;
+  }
+  
+  .detail-item strong {
+    margin-right: 10px;
+  }
