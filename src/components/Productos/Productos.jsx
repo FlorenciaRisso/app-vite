@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import ProductCard from './ProductCard';
-import './Productos.css';
+import React, { useEffect, useState } from "react";
+import ProductCard from "./ProductCard";
+import "./Productos.css";
 
 function Productos() {
   const [productos, setProductos] = useState([]);
@@ -32,7 +32,11 @@ function Productos() {
     <>
       <main className="content-wrap">
         <section className="content">
-          <h2 className="mt-3">Lista de productos</h2>
+          <div className="card-header w-100 text-center">
+            {/* Alinea el encabezado al centro */}
+            <h2 className="mt-3">Lista de productos</h2>
+          </div>
+
           <div className="product-list">
             {productos.map((producto) => (
               <ProductCard
@@ -43,17 +47,21 @@ function Productos() {
               />
             ))}
           </div>
-          <div className="pagination">
+        </section>
+
+         <div className="pagination">
             <button onClick={handlePrevPage} disabled={currentPage === 1}>
               Anterior
             </button>
-            <span>{currentPage} de {totalPages}</span>
-            <button onClick={handleNextPage} disabled={currentPage === totalPages}>
-              Siguiente
-            </button>
+            <span className="mx-4">
+              {currentPage} de {totalPages}
+            </span>
+            <button
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages}>Siguiente</button>
           </div>
-        </section>
       </main>
+      
     </>
   );
 }

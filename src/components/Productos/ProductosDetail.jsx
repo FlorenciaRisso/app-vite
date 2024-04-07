@@ -21,22 +21,22 @@ function ProductosDetail(props) {
     return (
         
         <div className="container mt-4">
-<div className="card-header w-100 text-center"> {/* Alinea el encabezado al centro */}
-           <h5>Detalle del Producto</h5> 
+            <div className="card-header w-100 text-center">
+                <h5>Detalle del Producto</h5> 
             </div>
         <div className="card product-detail col">
 
            
-            <div className="row"> {/* Columna para los detalles del producto */}
+            <div className="row"> 
 
-                <div className=" d-flex "> {/* Cambia 'border' por 'border-dark' */}
+                <div className=" d-flex ">
 
                 
                     <div className="d-flex flex-column">
                         
                             
                         
-                        <div className="card-body text-center"> {/* Alinea el contenido al centro */}
+                        <div className="card-body text-center">
                             <h5 className="card-title">{detalle.Nombre}</h5>
                             <p className="card-text">{detalle.Marca}</p>                    
                             <p className="card-text">{detalle.Descripcion}</p>

@@ -4775,7 +4775,8 @@ input[type=submit].btn-block {
 
 .card-body {
     flex: 1 1 auto;
-    padding: 1.25rem
+    padding: 1.25rem;
+    min-width: 250px
 }
 
 .card-title {

@@ -1,4 +1,4 @@
-import Categorias from "./Categorias";
+import Categorias from "./Categorias/Categorias";
 import imagenFondo from '../assets/images/redmiPadSE-1.png'
 import { Link } from 'react-router-dom'
 import React, { useEffect, useState } from 'react';
@@ -33,8 +33,7 @@ function LastProduct() {
                             <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ maxWidth: 20 + 'rem' }} src={`http://localhost:3030${ultimoProducto.ImagenesProductos[0].ruta}`} alt=" Xiaomi padSE "/> 
                         </div>
                         <p>{ultimoProducto.Descripcion}</p>
-                        <Link to={`/Productos/${ultimoProducto.ID_Producto}`} className="btn btn-danger">Ver Detalle
-            </Link>
+                        <Link to={`/Productos/${ultimoProducto.ID_Producto}`} className="btn btn-danger">Ver Detalle</Link>
                     </div>
                 </div>
             </div>

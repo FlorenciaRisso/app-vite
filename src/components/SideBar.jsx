@@ -42,7 +42,7 @@ function SideBar() {
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to='/'>
+                    <Link className="nav-link" to='/Discount'>
                         <i className="fas fa-fw fa-chart-area"></i>
                         <span>20% Off</span>
                     </Link>
@@ -50,14 +50,14 @@ function SideBar() {
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to='/'>
+                    <Link className="nav-link" to='/Usuarios'>
                         <i className="fas fa-fw fa-table"></i>
                         <span>Usuarios</span>
                     </Link>
                 </li>
 
                 <li className="nav-item">
-                    <Link className="nav-link" to='/'>
+                    <Link className="nav-link" to='/Categorias'>
                         <i className="fas fa-fw fa-table"></i>
                         <span>Categorias</span>
                     </Link>
