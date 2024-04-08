@@ -5,7 +5,7 @@ function UserCard(props) {
         <>
             <Link to={`/Usuarios/${props.user.id}`} className="user-cart">
                 <p className="user-name">{props.user.name}</p>
-                {/* <img key={props.index} src={`http://localhost:3030${props.imagen.ruta}`} alt={`Imagen ${props.index + 1}`} width={100}/> */}
+                <img key={props.index} src={`http://localhost:3030${props.imagen}`} alt={`Imagen ${props.index + 1}`} width={100}/>
                 <p className='email' >{props.user.email}</p>
             </Link>
         </>

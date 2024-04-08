@@ -22,3 +22,6 @@
     background-image: linear-gradient(225deg, #f396cb 0%, #b680e5 50%, #9979f1 100%);
 
   }
+  .card-categoria{
+    width: 80vw;
+  }

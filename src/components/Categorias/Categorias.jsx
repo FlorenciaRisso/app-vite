@@ -21,14 +21,14 @@ function Categorias() {
   };
 
   return (
-    <div className="card m-2">
+    <div className="card m-2 card-categoria">
       <div className="card-header ">
         <h5 className="m-0 font-weight-bold text-gray-800">Categorias</h5>
       </div>
 
       <div className=" d-flex">
         {categorias.map((categoria) => (
-          <div key={categoria.id} className="">
+          <div key={categoria.id} className="w-100">
             <Link
               to={'/Categorias'}
               className="categoria-link"

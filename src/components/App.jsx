@@ -6,6 +6,7 @@ import Productos from './Productos/Productos';
 import ProductosDetail from './Productos/ProductosDetail';
 import Discount from './Productos/Discount';
 import Usuarios from './Usuarios/Users'
+import UsuariosDetail from './Usuarios/UsuariosDetail'
 import Categorias from './Categorias/Categorias';
 import {Route,Switch} from 'react-router-dom';
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Productos/:id" exact={true} component={ProductosDetail} />
           <Route path="/Discount" exact={true} component={Discount} />
           <Route path="/Usuarios" exact={true} component={Usuarios} />
+          <Route path="/Usuarios/:id" exact={true} component={UsuariosDetail} />
           <Route path="/Categorias" exact={true} component={Categorias} />
         </Switch>
       </div>

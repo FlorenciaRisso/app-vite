@@ -12,7 +12,7 @@ function Users() {
       .then((response) => response.json())
       .then((data) => {
         setUsers(data.users);
-        setTotalPages(Math.ceil(data.count / 20));
+        setTotalPages(Math.ceil(data.count / 10));
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -42,6 +42,7 @@ function Users() {
           <div className="user-list">
             {users.map((user) => (
               <UserCard
+                imagen={user.imagen}
                 key={user.id}
                 user={user}
                 index={user.id}
