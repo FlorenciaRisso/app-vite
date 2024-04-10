@@ -4752,7 +4752,6 @@ input[type=submit].btn-block {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
     background-clip: border-box;
     border: 1px solid #e3e6f0;
     border-radius: .35rem
@@ -4808,7 +4807,8 @@ input[type=submit].btn-block {
 }
 
 .card-header:first-child {
-    border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0
+    border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0;
+    background-color: #dcd2ff;
 }
 
 .card-header+.list-group .list-group-item:first-child {
@@ -6980,7 +6980,7 @@ button.bg-purple:hover {
 }
 
 .d-flex {
-    display: flex !important
+    display: block
 }
 
 .d-inline-flex {
@@ -7060,6 +7060,9 @@ button.bg-purple:hover {
 
     .d-md-inline-flex {
         display: inline-flex !important
+    }
+    .d-flex{
+        display: flex !important
     }
 }
 
@@ -10673,7 +10676,8 @@ a:focus {
 }
 
 #wrapper {
-    display: flex
+    display: flex;
+    background-color: #dcd2ff;
 }
 
 #wrapper #content-wrapper {
@@ -10886,7 +10890,7 @@ a:focus {
 }
 
 .text-gray-300 {
-    color: #dddfeb !important
+    color: #b090d9
 }
 
 .text-gray-400 {
@@ -11350,6 +11354,8 @@ a:focus {
 }
 
 @media (min-width:768px) {
+
+
     .sidebar {
         width: 14rem !important
     }

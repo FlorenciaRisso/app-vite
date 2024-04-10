@@ -26,7 +26,7 @@ function Categorias() {
         <h5 className="m-0 font-weight-bold text-gray-800">Categorias</h5>
       </div>
 
-      <div className=" d-flex">
+      <div className="categories d-flex">
         {categorias.map((categoria) => (
           <div key={categoria.id} className="w-100">
             <Link
