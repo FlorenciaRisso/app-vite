@@ -22,7 +22,8 @@ function LastProduct() {
     
     return (
         <div className="row">
-            {/*<!-- Last Movie in DB -->*/}
+            <Categorias/>
+            {/*<!-- Last Product in DB -->*/}
             <div className="col-lg-6 mb-4">
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
@@ -38,7 +39,7 @@ function LastProduct() {
                 </div>
             </div>
             {/*<!-- End content row Ultimo producto creado -->*/}
-            <Categorias/>
+            
         </div>
     )
 }
