@@ -599,6 +599,9 @@ pre code {
     .container {
         max-width: 720px
     }
+    .sidebar-brand .nav-link__logo{
+        bottom: -14px !important;
+    }
 }
 
 @media (min-width:992px) {
@@ -636,7 +639,8 @@ pre code {
 .no-gutters>.col,
 .no-gutters>[class*=col-] {
     padding-right: 0;
-    padding-left: 0
+    padding-left: 0;
+    min-width: 100px;
 }
 
 .col,
@@ -4752,7 +4756,6 @@ input[type=submit].btn-block {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
     background-clip: border-box;
     border: 1px solid #e3e6f0;
     border-radius: .35rem
@@ -4776,7 +4779,6 @@ input[type=submit].btn-block {
 .card-body {
     flex: 1 1 auto;
     padding: 1.25rem;
-    min-width: 250px
 }
 
 .card-title {
@@ -4808,7 +4810,8 @@ input[type=submit].btn-block {
 }
 
 .card-header:first-child {
-    border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0
+    border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0;
+    background-color: #dcd2ff;
 }
 
 .card-header+.list-group .list-group-item:first-child {
@@ -6979,9 +6982,6 @@ button.bg-purple:hover {
     display: table-cell !important
 }
 
-.d-flex {
-    display: flex !important
-}
 
 .d-inline-flex {
     display: inline-flex !important
@@ -7060,6 +7060,9 @@ button.bg-purple:hover {
 
     .d-md-inline-flex {
         display: inline-flex !important
+    }
+    .d-flex{
+        display: flex !important
     }
 }
 
@@ -10673,11 +10676,12 @@ a:focus {
 }
 
 #wrapper {
-    display: flex
+    display: flex;
+    background-color: #dcd2ff;
 }
 
 #wrapper #content-wrapper {
-    background-color: #f8f9fc;
+    background-color: #dcd2ff;
     width: 100%;
     overflow-x: hidden
 }
@@ -10886,7 +10890,7 @@ a:focus {
 }
 
 .text-gray-300 {
-    color: #dddfeb !important
+    color: #b090d9
 }
 
 .text-gray-400 {
@@ -11316,7 +11320,11 @@ a:focus {
     font-family: 'Font Awesome 5 Free';
     margin-left: .25rem
 }
-
+.sidebar-brand .nav-link__logo{
+    position: absolute !important;
+    right: 3px;
+    bottom: 5px;
+}
 .sidebar .sidebar-brand {
     height: 4.375rem;
     text-decoration: none;
@@ -11326,7 +11334,8 @@ a:focus {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .05rem;
-    z-index: 1
+    z-index: 1;
+    position:relative;
 }
 
 .sidebar .sidebar-brand .sidebar-brand-icon i {
@@ -11350,6 +11359,8 @@ a:focus {
 }
 
 @media (min-width:768px) {
+
+
     .sidebar {
         width: 14rem !important
     }
@@ -11385,7 +11396,7 @@ a:focus {
         padding: 1rem;
         width: 14rem
     }
-
+    
     .sidebar .nav-item .nav-link i {
         font-size: .85rem;
         margin-right: .25rem

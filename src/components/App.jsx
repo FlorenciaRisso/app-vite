@@ -8,6 +8,7 @@ import Discount from './Productos/Discount';
 import Usuarios from './Usuarios/Users'
 import UsuariosDetail from './Usuarios/UsuariosDetail'
 import Categorias from './Categorias/Categorias';
+import CategoriasDetail from './Categorias/CardList';
 import {Route,Switch} from 'react-router-dom';
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Usuarios" exact={true} component={Usuarios} />
           <Route path="/Usuarios/:id" exact={true} component={UsuariosDetail} />
           <Route path="/Categorias" exact={true} component={Categorias} />
+          <Route path="/Categorias/:id" component={Categorias} />
         </Switch>
       </div>
     </>

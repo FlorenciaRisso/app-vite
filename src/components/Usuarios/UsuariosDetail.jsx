@@ -10,7 +10,6 @@ function UsuariosDetail
         fetch(`http://localhost:3030/api/users/${id}`)
             .then(respuesta => respuesta.json())
             .then(detalle => {
-                console.log(detalle);
                 setDetalles(detalle);
             });
     }, [id]);
@@ -34,6 +33,9 @@ function UsuariosDetail
 
                             <div className="card-body text-center">
                                 <h3 className="card-title">{detalle.nombre} {detalle.apellido}</h3>
+                                <div className="row w-100 justify-content-center">
+                    <img src={`http://localhost:3030${detalle.avatarURL}`} alt="" className="img-fluid" width={100}/>
+                </div>
                                 <p className="card-text">{detalle.email}</p>
                                 <p className="card-text">{detalle.nacionalidad}</p>
                                 <p className="card-text">Rol: {detalle.rol}</p>
@@ -42,9 +44,7 @@ function UsuariosDetail
                         </div>
                     </div>
                 </div>
-                <div className="row w-100 justify-content-center">
-                    <img src={`http://localhost:3030${detalle.avatarURL}`} alt="" className="img-fluid" width={100}/>
-                </div>
+                
 
 
             </div>
