@@ -10,7 +10,7 @@ function SideBar() {
 
                 {/*<!-- Sidebar - Brand -->*/}
                 <li className="nav-item sidebar-brand d-flex align-items-center justify-content-center">
-                    <Link className="nav-link" to="/">
+                    <Link className="nav-link nav-link__logo" to="/">
                         <img className="w-100" src={image} alt="Digital House" />
                     </Link>
                 </li>

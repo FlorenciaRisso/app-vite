@@ -1,51 +1,32 @@
 import React, { useEffect, useState } from "react";
 
-function CardList({ categoryId }) {
+function CardList(props) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const fetchProducts = async (page) => {
-      try {
-        const response = await fetch(`http://localhost:3030/api/products?page=${page}&category=${categoryId}`);
-        if (!response.ok) {
-          throw new Error('Error fetching products');
-        }
-        const data = await response.json();
-        return data.products;
-      } catch (error) {
-        console.error("Error fetching products:", error);
-        return [];
-      }
-    };
-
-    const fetchAllProducts = async () => {
-      try {
-        let allProducts = await fetchProducts(1);
-        
-        const secondPageProducts = await fetchProducts(2);
-        allProducts = allProducts.concat(secondPageProducts);
-        
-        const thirdPageProducts = await fetchProducts(3);
-        allProducts = allProducts.concat(thirdPageProducts);
-        
-        const filteredProducts = allProducts.filter(product => product.ID_Categoria === categoryId);
-        setProducts(filteredProducts);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    };
-
-    fetchAllProducts();
-  }, [categoryId]);
+    fetch("http://localhost:3030/api/cat/detail/" + props.categoryId)
+      .then((respuesta) => respuesta.json())
+      .then((categoria) => {
+        setProducts(categoria.Categories[0].Productos);
+      });
+  }, []);
 
   return (
     <div className="container-cards">
-      <ul>
-        {products.map((product) => (
-          <li className="category-cart" key={product.ID_Producto}>
-            <h3>{product.Nombre}</h3>
-            <p>Precio: {product.Precio}</p>
-            <p>Descripción: {product.Descripcion}</p>
+      <ul className="d-flex flex-column pl-0">
+        {products.map((product, index) => (
+          <li className="category-cart" key={index}>
+            <div className="d-flex align-items-center">
+              <div>
+                <img src={`http://localhost:3030${product.ImagenesProductos[0].ruta}`} width={100} />
+              </div>
+              <div>
+                <h3><b>{product.Nombre}</b></h3>
+                <p><b>Precio:</b> {product.Precio}</p>
+                <p><b>Stock:</b> {product.Stock}</p>
+                <p><b>Descripción:</b> {product.Descripcion}</p>
+              </div>
+            </div>
           </li>
         ))}
       </ul>

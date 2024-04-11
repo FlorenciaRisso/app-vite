@@ -10,7 +10,6 @@ function UsuariosDetail
         fetch(`http://localhost:3030/api/users/${id}`)
             .then(respuesta => respuesta.json())
             .then(detalle => {
-                console.log(detalle);
                 setDetalles(detalle);
             });
     }, [id]);

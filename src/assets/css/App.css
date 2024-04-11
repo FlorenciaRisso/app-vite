@@ -599,6 +599,9 @@ pre code {
     .container {
         max-width: 720px
     }
+    .sidebar-brand .nav-link__logo{
+        bottom: -14px !important;
+    }
 }
 
 @media (min-width:992px) {
@@ -636,7 +639,8 @@ pre code {
 .no-gutters>.col,
 .no-gutters>[class*=col-] {
     padding-right: 0;
-    padding-left: 0
+    padding-left: 0;
+    min-width: 100px;
 }
 
 .col,
@@ -4775,7 +4779,6 @@ input[type=submit].btn-block {
 .card-body {
     flex: 1 1 auto;
     padding: 1.25rem;
-    min-width: 250px
 }
 
 .card-title {
@@ -6979,9 +6982,6 @@ button.bg-purple:hover {
     display: table-cell !important
 }
 
-.d-flex {
-    display: block
-}
 
 .d-inline-flex {
     display: inline-flex !important
@@ -11320,7 +11320,11 @@ a:focus {
     font-family: 'Font Awesome 5 Free';
     margin-left: .25rem
 }
-
+.sidebar-brand .nav-link__logo{
+    position: absolute !important;
+    right: 3px;
+    bottom: 5px;
+}
 .sidebar .sidebar-brand {
     height: 4.375rem;
     text-decoration: none;
@@ -11330,7 +11334,8 @@ a:focus {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .05rem;
-    z-index: 1
+    z-index: 1;
+    position:relative;
 }
 
 .sidebar .sidebar-brand .sidebar-brand-icon i {
@@ -11391,7 +11396,7 @@ a:focus {
         padding: 1rem;
         width: 14rem
     }
-
+    
     .sidebar .nav-item .nav-link i {
         font-size: .85rem;
         margin-right: .25rem

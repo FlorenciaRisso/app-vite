@@ -9,7 +9,6 @@ function ProductosDetail(props) {
         fetch(`http://localhost:3030/api/products/${id}`)
             .then(respuesta => respuesta.json())
             .then(detalle => {
-                console.log(detalle);
                 setDetalles(detalle);
             });
     }, [id]);
